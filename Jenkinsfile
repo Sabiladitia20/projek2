@@ -1,8 +1,8 @@
 pipeline {
     agent any
     environment {
-        DOCKER_IMAGE = 'sabiladitia/shopping-apps:latest'
-        CONTAINER_NAME = 'shopping_apps'
+        DOCKER_IMAGE = 'sabiladitia/car_dealer:latest'
+        CONTAINER_NAME = 'car_dealer'
         PORT_MAPPING = '9090:80' // Menggunakan port 9090 untuk Jenkins
     }
     stages {
