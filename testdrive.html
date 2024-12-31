@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test Drive</title>
+  <link rel="stylesheet" href="Test.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="navbar-left">
+        <div class="logo">
+          <img src="slidesgo.png" alt="my logo">
+        </div>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="Test.html">Home</a></li>
+            <li><a href="#">Product</a></li>
+            <li><a href="#services">Services</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="test-drive-section">
+      <div class="container">
+        <h2>Test Drive Form</h2>
+        <form id="testDriveForm">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+          </div>
+          <div class="form-group">
+            <label for="date">Preferred Date:</label>
+            <input type="date" id="date" name="date" required>
+          </div>
+          <button type="submit" class="btn submit-btn">Submit</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <span class="close-btn">&times;</span>
+      <p>Data berhasil terisi. Silahkan datang ke dealer terdekat.</p>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-nav">
+       
+      </div>
+    </div>
+  </footer>
+
+  <script src="testdrive.js"></script>
+</body>
+</html>

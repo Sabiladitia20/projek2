@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="login.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="wrapper">
+        <form id="loginForm">
+        <form action="">
+            <h1>Login</h1>
+            <div class="input-box">
+                <input type="text" id="username" placeholder="Username" required>
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="input-box">
+                <input type="password" id="password" placeholder="Password" required>
+                <i class='bx bxs-lock-alt'></i> 
+            </div>
+            <div class="remember-forgot">
+                <label><input type="checkbox"> Remember Me
+               </label>
+               <a href="#">Forgot Password</a>
+            </div>
+            <button type="submit" class="btn">Login</button>
+            <div class="register-link">
+                <p> Don't have an account? <a 
+                    href="register.html"> Register</a></p>
+            </div>
+        </form>
+            <script>
+                 document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('loginForm');
+            form.addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent form submission
+                
+                const username = document.getElementById('username').value;
+                const password = document.getElementById('password').value;
+                
+                // Get stored credentials from localStorage
+                const storedUsername = localStorage.getItem('username');
+                const storedPassword = localStorage.getItem('password');
+                
+                console.log('Login attempt:', { username, password });
+                console.log('Stored credentials:', { storedUsername, storedPassword });
+                
+                
+                if (username === storedUsername && password === storedPassword) {
+                    // Login is successful, redirect to homepage
+                    window.location.href = "Test.html"; // Change to your homepage
+                } else {
+                    // Display error message
+                    alert('Invalid username or password');
+                }
+            });
+        });
+                </script>
+                
+</body>
+</html>
