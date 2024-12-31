@@ -3,7 +3,7 @@ pipeline {
     environment {
         DOCKER_IMAGE = 'sabiladitia/car_dealer:latest'
         CONTAINER_NAME = 'car_dealer'
-        PORT_MAPPING = '9090:80' // Menggunakan port 9090 untuk Jenkins
+        PORT_MAPPING = '9091:80' // Menggunakan port 9090 untuk Jenkins
     }
     stages {
         stage('Checkout') {
