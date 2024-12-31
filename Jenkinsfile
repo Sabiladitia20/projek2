@@ -9,8 +9,12 @@ pipeline {
         stage('Checkout') {
             steps {
                 deleteDir() // Membersihkan workspace
-                checkout([$class: 'GitSCM', branches: [[name: 'main']]],
-                    userRemoteConfigs: [[url: 'https://github.com/Sabiladitia20/projek2.git']]
+                checkout(
+                    scm: [
+                        $class: 'GitSCM', 
+                        branches: [[name: 'main']], 
+                        userRemoteConfigs: [[url: 'https://github.com/Sabiladitia20/projek2.git']]
+                    ]
                 )
             }
         }
@@ -20,7 +24,7 @@ pipeline {
                 script {
                     // Pastikan menggunakan perintah 'bat' di Windows jika menggunakan Docker lewat cmd
                     bat """
-                        docker build -f Dockerfile -t ${DOCKER_IMAGE} .
+                        docker build -f Dockerfile -t ${DOCKER_IMAGE} . 
                     """
                 }
             }
